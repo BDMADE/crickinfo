@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block player %}
+    <div class="container">
+    <h3>Players list</h3>
+        {% for player in players %}
+            <label class="checkbox-inline"><input type="checkbox" name="{{ player }}" checked="checked" /> {{ player }}</label>
+        {% endfor %}
+        <h2>Players Table</h2>
+        <p>Player with Runs</p>
+        <table class="table playerTable table-bordered">
+            <thead>
+            <tr>
+                <th>Year/Score</th>
+                {% for player in players %}
+                    <th class="{{ player }}">{{ player }}</th>
+                {% endfor %}
+
+            </tr>
+            </thead>
+        <tbody>
+            {% for row in rows %}
+                {% for year, player_scores in row.items %}
+                    <tr>
+                        <td>{{year}}</td>
+                        {% for player_score in player_scores %}
+                            {% for player_name, score  in player_score.items %}
+                                <td class="{{player_name}}">{{score}}</td>
+                            {% endfor %}
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            {% endfor %}
+        </tbody>
+        </table>
+    </div>
+
+<div class="container">
+<p><h2>Summery Table</h2></p>
+    <table class="table summaryTable table-striped">
+        <thead>
+        <tr>
+            <th>Year/Runs</th>
+            <th>Condition</th>
+            <th>Average</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+{% endblock %}
+

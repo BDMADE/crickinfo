@@ -1,0 +1,41 @@
+{% load staticfiles %}
+<!--DOCTYPE html -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>CrickInfo | dJnago Sample app</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=no">
+    <meta name="robots" content="index,Follow"/>
+    <meta name="description" content="Home">
+    <meta name="keywords" content="Home,Home">
+    <meta name="author" content="Tanbir Hasan"/>
+    <!-- Stylesheet -->
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel='stylesheet' href="{% static 'css/styles.css' %}"/>
+
+    <!-- Google Font -->
+    <link
+            href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+            rel='stylesheet' type='text/css'>
+    <!-- Java Sript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"
+            type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-checkbox/1.4.0/bootstrap-checkbox.min.js"></script>
+
+
+</head>
+<body>
+
+{% block player %}{% endblock player %}
+<!-- Java Script -->
+<script src="{% static 'js/custom.js' %}"></script>
+</body>
+</html>
+
